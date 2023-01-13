@@ -8,7 +8,6 @@ public class ProductPage extends BasePage{
     public ProductPage(AndroidDriver driver) {
         super(driver);
     }
-
     @AndroidFindBy(xpath = "//android.view.ViewGroup[@content-desc='Add To Cart button']")
     private WebElement btnAddToCard;
     @AndroidFindBy(xpath = "//android.view.ViewGroup[@content-desc='cart badge']")
@@ -18,15 +17,7 @@ public class ProductPage extends BasePage{
         return btnAddToCard;
     }
 
-    public void setBtnAddToCard(WebElement btnAddToCard) {
-        this.btnAddToCard = btnAddToCard;
-    }
-
     public WebElement getBtnCard() {
         return btnCard;
-    }
-
-    public void setBtnCard(WebElement btnCard) {
-        this.btnCard = btnCard;
     }
 }
