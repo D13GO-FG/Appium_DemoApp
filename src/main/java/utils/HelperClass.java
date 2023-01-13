@@ -1,19 +1,17 @@
-package tests;
+package utils;
 
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.remote.MobileCapabilityType;
-import io.cucumber.java.After;
-import io.cucumber.java.Before;
 import org.openqa.selenium.remote.DesiredCapabilities;
 
 import java.io.File;
 import java.net.MalformedURLException;
 import java.net.URL;
 
-public class Hooks extends BaseTest{
-    @Before
-    public static void setupDriver() throws MalformedURLException {
-        //Declaring desired capabilities
+public class HelperClass {
+    private static HelperClass helperClass;
+    private static AndroidDriver driver;
+    private HelperClass() throws MalformedURLException {
         DesiredCapabilities cap = new DesiredCapabilities();
         //Define where the apk file is located
         File appDir = new File("D:/2022/Java Projects/appiumBootcamp/src/main/resources");
@@ -27,8 +25,18 @@ public class Hooks extends BaseTest{
         //Server port and URL
         driver = new AndroidDriver(new URL("http://127.0.0.1:4723/wd/hub"), cap);
     }
-    @After
-    public static void quitDriver() throws Exception{
-        driver.quit();
+    public static AndroidDriver getDriver() {
+        return driver;
+    }
+    public static void setUpDriver() throws MalformedURLException {
+        if (helperClass==null) {
+            helperClass = new HelperClass();
+        }
+    }
+    public static void tearDown() {
+        if(driver!=null) {
+            driver.quit();
+        }
+        helperClass = null;
     }
 }
