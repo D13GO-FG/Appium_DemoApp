@@ -14,11 +14,18 @@ public class CatalogPage extends BasePage{
     @AndroidFindBy(xpath = "//android.widget.TextView[@text='Products']")
     private WebElement titleProduct;
 
+    @AndroidFindBy(xpath = "//android.view.ViewGroup[@content-desc='open menu']")
+    private WebElement burgerBtn;
+
     public WebElement getSelectProduct() {
         return selectProduct;
     }
 
     public WebElement getTitleProduct() {
         return titleProduct;
+    }
+
+    public WebElement getBurgerBtn() {
+        return burgerBtn;
     }
 }

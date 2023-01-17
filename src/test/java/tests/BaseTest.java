@@ -2,7 +2,9 @@ package tests;
 
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.remote.MobileCapabilityType;
+import org.openqa.selenium.remote.Browser;
 import org.openqa.selenium.remote.DesiredCapabilities;
+import sun.plugin2.util.BrowserType;
 
 import java.io.File;
 import java.net.MalformedURLException;
@@ -20,6 +22,8 @@ public class BaseTest{
         cap.setCapability(MobileCapabilityType.DEVICE_NAME, "Pixel_3a");
         //Define the automation type for our test
         cap.setCapability(MobileCapabilityType.AUTOMATION_NAME, "UiAutomator2");
+        //cap.setCapability(MobileCapabilityType.BROWSER_NAME, "Chrome");
+        //cap.setCapability("chromedriverExecutable", "D:\\2022\\Selemiun Driver and jars\\chromedriver_win32\\chromedriver.exe");
         //Define the app we are using for our test
         cap.setCapability(MobileCapabilityType.APP, app.getAbsolutePath());
         //Server port and URL

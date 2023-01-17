@@ -13,12 +13,20 @@ public class CatalogSteps extends BaseStep {
     CatalogPage catalogPage = new CatalogPage(driver);
     public CatalogSteps(AndroidDriver driver){
         super(driver);
-        //this.catalogPage = new CatalogPage(driver);
-        //PageFactory.initElements(new AppiumFieldDecorator(driver),catalogPage);
     }
 
     public void clickProduct(){
         WebElement clickProduct = new WebDriverWait(driver, Duration.ofSeconds(5)).until(ExpectedConditions.visibilityOf(catalogPage.getSelectProduct()));
         clickProduct.click();
+    }
+
+    public void getProductTitle(){
+        WebElement isVisible = new WebDriverWait(driver, Duration.ofSeconds(5)).until(ExpectedConditions.visibilityOf(catalogPage.getTitleProduct()));
+        isVisible.isDisplayed();
+    }
+
+    public void clickBurgerBtn(){
+        WebElement clickBtn = new WebDriverWait(driver, Duration.ofSeconds(5)).until(ExpectedConditions.visibilityOf(catalogPage.getBurgerBtn()));
+        clickBtn.click();
     }
 }

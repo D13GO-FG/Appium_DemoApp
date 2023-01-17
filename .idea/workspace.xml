@@ -4,7 +4,19 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ab04c182-13b4-490d-8602-cc3b5bf61f05" name="Changes" comment="Refactor setup to POM v2" />
+    <list default="true" id="ab04c182-13b4-490d-8602-cc3b5bf61f05" name="Changes" comment="Added README file">
+      <change afterPath="$PROJECT_DIR$/src/main/java/pageObjects/LeftMenuPage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/pageObjects/WebViewPage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/steps/LeftMenuSteps.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/steps/WebViewSteps.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/stepDefinitions/openWebView.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/resources/features/openWebView.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pageObjects/CatalogPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pageObjects/CatalogPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/steps/CatalogSteps.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/steps/CatalogSteps.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/runner/testRunner.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/runner/testRunner.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/tests/BaseTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/BaseTest.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -29,18 +41,18 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;D:/2022/Java Projects/appiumBootcamp/src/main/resources&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "last_opened_file_path": "D:/2022/Java Projects/appiumBootcamp/src/test/java/stepDefinitions",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0",
+    "settings.editor.selected.configurable": "preferences.pluginManager"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\2022\Java Projects\appiumBootcamp\src\main\resources" />
@@ -179,7 +191,14 @@
       <option name="project" value="LOCAL" />
       <updated>1673583275865</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Added README file">
+      <created>1673925182439</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1673925182439</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -197,6 +216,7 @@
     <MESSAGE value="Setup to POM with Cucumber and First test case to Add Product to Card." />
     <MESSAGE value="Refactor setup to POM" />
     <MESSAGE value="Refactor setup to POM v2" />
-    <option name="LAST_COMMIT_MESSAGE" value="Refactor setup to POM v2" />
+    <MESSAGE value="Added README file" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added README file" />
   </component>
 </project>
