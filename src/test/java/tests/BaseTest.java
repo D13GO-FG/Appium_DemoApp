@@ -2,9 +2,7 @@ package tests;
 
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.remote.MobileCapabilityType;
-import org.openqa.selenium.remote.Browser;
 import org.openqa.selenium.remote.DesiredCapabilities;
-import sun.plugin2.util.BrowserType;
 
 import java.io.File;
 import java.net.MalformedURLException;
@@ -26,6 +24,7 @@ public class BaseTest{
         //cap.setCapability("chromedriverExecutable", "D:\\2022\\Selemiun Driver and jars\\chromedriver_win32\\chromedriver.exe");
         //Define the app we are using for our test
         cap.setCapability(MobileCapabilityType.APP, app.getAbsolutePath());
+        cap.setCapability("autoGrantPermissions", "true");
         //Server port and URL
         driver = new AndroidDriver(new URL("http://127.0.0.1:4723/wd/hub"), cap);
     }

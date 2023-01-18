@@ -4,7 +4,7 @@ import io.cucumber.testng.AbstractTestNGCucumberTests;
 import io.cucumber.testng.CucumberOptions;
 
 @CucumberOptions(
-        tags = "@SmokeTestWebView",
+        tags = "@SmokeGeoLocation",
         features = "src/test/resources/features",
         glue = {"stepDefinitions", "runner"},
         plugin = {"pretty","html:target/cucumber-html-report.html"}
