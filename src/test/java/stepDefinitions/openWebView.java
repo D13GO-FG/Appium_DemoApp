@@ -10,12 +10,9 @@ import steps.LeftMenuSteps;
 import steps.WebViewSteps;
 import tests.BaseTest;
 
-import java.time.Duration;
-
 public class openWebView {
     CatalogSteps catalogSteps = new CatalogSteps(BaseTest.getDriver());
     LeftMenuSteps leftMenuSteps = new LeftMenuSteps(BaseTest.getDriver());
-
     WebViewSteps webViewSteps = new WebViewSteps(BaseTest.getDriver());
     @Given("The user is on the home screen")
     public void theUserIsOnTheHomeScreen() {
@@ -62,8 +59,7 @@ public class openWebView {
     @Then("The search results should be displayed")
     public void theSearchResultsShouldBeDisplayed() {
         Boolean status = webViewSteps.isTitleSearch();
-        Assert.assertEquals(status, true, "Title is not present");
-        BaseTest.getDriver().manage().timeouts().implicitlyWait(Duration.ofSeconds(50));
+        Assert.assertTrue(status, "Title is not present");
         BaseTest.getDriver().context("NATIVE_APP");
     }
 }

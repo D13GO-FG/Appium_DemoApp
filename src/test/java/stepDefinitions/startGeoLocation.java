@@ -17,8 +17,7 @@ public class startGeoLocation {
     @Given("The user opens the geolocation page")
     public void theUserOpensTheGeolocationPage() {
         getDriver().get("mydemoapprn://geo-locations");
-        Assert.assertEquals(geoLocationSteps.getTitlePage(), true, "Page isn't Geo Location");
-        getDriver().manage().timeouts().implicitlyWait(Duration.ofSeconds(50));
+        Assert.assertTrue(geoLocationSteps.getTitlePage(), "Page isn't Geo Location");
     }
 
     @Then("The latitude and longitude should be different from {string}")
