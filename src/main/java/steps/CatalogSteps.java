@@ -20,9 +20,9 @@ public class CatalogSteps extends BaseStep {
         clickProduct.click();
     }
 
-    public void getProductTitle(){
+    public Boolean getProductTitle(){
         WebElement isVisible = new WebDriverWait(driver, Duration.ofSeconds(5)).until(ExpectedConditions.visibilityOf(catalogPage.getTitleProduct()));
-        isVisible.isDisplayed();
+        return isVisible.isDisplayed();
     }
 
     public void clickBurgerBtn(){

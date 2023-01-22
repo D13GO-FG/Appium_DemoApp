@@ -84,3 +84,39 @@ Feature: Drawing functionality
 |                     Drawing View                      |                   Drawing a sketch                    |                Save Pop Up to verifier                |
 |:-----------------------------------------------------:|:-----------------------------------------------------:|:-----------------------------------------------------:|
 | ![Drawing_1](src/main/resources/images/Drawing_1.png) | ![Drawing_2](src/main/resources/images/Drawing_2.png) | ![Drawing_3](src/main/resources/images/Drawing_3.png) |
+
+5. Login Page
+````
+@SmokeLogin
+Feature: Login
+  As a user
+  I want to be able to log in to the application
+  So that I can access the catalog page
+Background:
+  Given The user is on the login page
+
+  Scenario: Successful login with correct credential
+    When The user input an username "bob@example.com"
+    And The user input an password "10203040"
+    When The user click the login button
+    Then The user should be directed to the catalog page
+
+  Scenario Outline: Unsuccessful login with incorrect credentials
+    When The user input an username "<username>"
+    And The user input an password "<password>"
+    When The user click the login button
+    Then I should see an error message "<errorMessage>"
+    Examples:
+      | username          | password | errorMessage |
+      | alice@example.com | 10203040 |      Sorry, this user has been locked out.        |
+      | bob@example.com   | 10203041 |        Provided credentials do not match any user in this service.      |
+````
+### Scenario: Successful login with correct credential
+|                    Login View                     |              Input username and pwd               |                As a result display                |
+|:-------------------------------------------------:|:-------------------------------------------------:|:-------------------------------------------------:|
+| ![Login_1](src/main/resources/images/Login_1.png) | ![Login_2](src/main/resources/images/Login_2.png) | ![Login_3](src/main/resources/images/Login_3.png) |
+
+### Scenario Outline: Unsuccessful login with incorrect credentials
+|                    Locked out                     |                 Wrong credentials                 |
+|:-------------------------------------------------:|:-------------------------------------------------:|
+| ![Login_4](src/main/resources/images/Login_4.png) | ![Login_5](src/main/resources/images/Login_5.png) |

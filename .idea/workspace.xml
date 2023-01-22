@@ -4,17 +4,23 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ab04c182-13b4-490d-8602-cc3b5bf61f05" name="Changes" comment="Test case: Verify GeoLocation view, weather is visible latitude and longitude, and if stop and start button work.">
-      <change afterPath="$PROJECT_DIR$/src/main/java/pageObjects/DrawingPage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/steps/DrawingStep.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/stepDefinitions/doDrawing.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/resources/features/doDrawing.feature" afterDir="false" />
+    <list default="true" id="ab04c182-13b4-490d-8602-cc3b5bf61f05" name="Changes" comment="Test case: Verify Drawing Canvas view, check if it works correctly drawing, saving the sketch and clearing canvas board.">
+      <change afterPath="$PROJECT_DIR$/src/main/java/pageObjects/CheckoutPage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/pageObjects/LogInPage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/steps/CheckoutSteps.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/steps/LogInSteps.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/images/Login_1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/images/Login_2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/images/Login_3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/images/Login_4.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/images/Login_5.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/stepDefinitions/logInApp.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/resources/features/logInApp.feature" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/steps/GeoLocationSteps.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/steps/GeoLocationSteps.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/steps/CatalogSteps.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/steps/CatalogSteps.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/runner/testRunner.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/runner/testRunner.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/stepDefinitions/openWebView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/stepDefinitions/openWebView.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/stepDefinitions/startGeoLocation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/stepDefinitions/startGeoLocation.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -211,7 +217,14 @@
       <option name="project" value="LOCAL" />
       <updated>1674023114528</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Test case: Verify Drawing Canvas view, check if it works correctly drawing, saving the sketch and clearing canvas board.">
+      <created>1674291236190</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1674291236190</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -232,6 +245,7 @@
     <MESSAGE value="Added README file" />
     <MESSAGE value="Test case: Verify WebView in app, all flow and search in google &quot;Hello World&quot; to check whether is working correctly." />
     <MESSAGE value="Test case: Verify GeoLocation view, weather is visible latitude and longitude, and if stop and start button work." />
-    <option name="LAST_COMMIT_MESSAGE" value="Test case: Verify GeoLocation view, weather is visible latitude and longitude, and if stop and start button work." />
+    <MESSAGE value="Test case: Verify Drawing Canvas view, check if it works correctly drawing, saving the sketch and clearing canvas board." />
+    <option name="LAST_COMMIT_MESSAGE" value="Test case: Verify Drawing Canvas view, check if it works correctly drawing, saving the sketch and clearing canvas board." />
   </component>
 </project>

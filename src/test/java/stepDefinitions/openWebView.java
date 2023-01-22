@@ -16,7 +16,7 @@ public class openWebView {
     WebViewSteps webViewSteps = new WebViewSteps(BaseTest.getDriver());
     @Given("The user is on the home screen")
     public void theUserIsOnTheHomeScreen() {
-        catalogSteps.getProductTitle();
+        Assert.assertTrue(catalogSteps.getProductTitle(), "There's not title visible.");
     }
 
     @When("The user clicks on the burger button")
