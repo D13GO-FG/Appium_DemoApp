@@ -20,6 +20,10 @@ public class LogInPage extends BasePage{
 
     @AndroidFindBy(xpath = "//android.view.ViewGroup[@content-desc=\"generic-error-message\"]/android.widget.TextView")
     private WebElement msgError;
+
+    @AndroidFindBy(xpath = "//android.view.ViewGroup[@content-desc=\"login screen\"]")
+    private WebElement isLoginScreen;
+
     public WebElement getInputUsername() {
         return inputUsername;
     }
@@ -34,5 +38,9 @@ public class LogInPage extends BasePage{
 
     public WebElement getMsgError() {
         return msgError;
+    }
+
+    public WebElement getIsLoginScreen() {
+        return isLoginScreen;
     }
 }

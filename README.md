@@ -120,3 +120,28 @@ Background:
 |                    Locked out                     |                 Wrong credentials                 |
 |:-------------------------------------------------:|:-------------------------------------------------:|
 | ![Login_4](src/main/resources/images/Login_4.png) | ![Login_5](src/main/resources/images/Login_5.png) |
+
+6. LogOut Page
+````
+@SmokeLogOut
+Feature: Logout
+  As a user
+  the user wants to be able to log out of the application
+  So that user can exit his session securely
+Background:
+  Given The user is in Catalog
+  When The user open the left menu of options
+  And The user clicks the logout option
+  When The user looks at the logout confirmation pop-up "Log Out"
+  Scenario: Successful logout
+    And The user clicks the logout button
+    And The user clicks OK on the confirmation pop-up "You are successfully logged out."
+    Then The user should be logged out
+
+  Scenario: Cancel logout
+    And The user clicks the cancel button
+    Then The user returns to left menu
+````
+|                    Logout option                    |                 Pop up with options                 |               Pop up with success msg               |                 Logout Final Screen                 |
+|:---------------------------------------------------:|:---------------------------------------------------:|:---------------------------------------------------:|:---------------------------------------------------:|
+| ![Logout_1](src/main/resources/images/logout_1.png) | ![Logout_2](src/main/resources/images/logout_2.png) | ![Logout_3](src/main/resources/images/logout_3.png) | ![Logout_4](src/main/resources/images/logout_4.png) |

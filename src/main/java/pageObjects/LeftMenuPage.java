@@ -13,7 +13,14 @@ public class LeftMenuPage extends BasePage{
     @AndroidFindBy(xpath = "//android.view.ViewGroup[@content-desc='menu item webview']")
     private WebElement viewOption;
 
+    @AndroidFindBy(accessibility = "menu item log out")
+    private WebElement logoutOption;
+
     public WebElement getViewOption() {
         return viewOption;
+    }
+
+    public WebElement getLogoutOption() {
+        return logoutOption;
     }
 }

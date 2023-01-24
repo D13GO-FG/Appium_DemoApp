@@ -18,4 +18,14 @@ public class LeftMenuSteps extends BaseStep{
         WebElement clickOption = new WebDriverWait(driver, Duration.ofSeconds(5)).until(ExpectedConditions.visibilityOf(leftMenuPage.getViewOption()));
         clickOption.click();
     }
+
+    public void clickLogOutOption(){
+        WebElement option = new WebDriverWait(driver, Duration.ofSeconds(5)).until(ExpectedConditions.visibilityOf(leftMenuPage.getLogoutOption()));
+        option.click();
+    }
+
+    public Boolean isLogOutVisible(){
+        WebElement option = new WebDriverWait(driver, Duration.ofSeconds(5)).until(ExpectedConditions.visibilityOf(leftMenuPage.getLogoutOption()));
+        return option.isDisplayed();
+    }
 }

@@ -33,4 +33,9 @@ public class LogInSteps extends BaseStep{
         WebElement msgError = new WebDriverWait(driver, Duration.ofSeconds(5)).until(ExpectedConditions.visibilityOf(logInPage.getMsgError()));
         return msgError.getText();
     }
+
+    public Boolean isLoginScreen(){
+        WebElement title = new WebDriverWait(driver, Duration.ofSeconds(5)).until(ExpectedConditions.visibilityOf(logInPage.getIsLoginScreen()));
+        return title.isDisplayed();
+    }
 }
