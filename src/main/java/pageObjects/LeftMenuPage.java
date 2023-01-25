@@ -10,11 +10,23 @@ public class LeftMenuPage extends BasePage{
         super(androidDriver);
     }
 
-    @AndroidFindBy(xpath = "//android.view.ViewGroup[@content-desc='menu item webview']")
+    @AndroidFindBy(accessibility = "menu item webview")
     private WebElement viewOption;
 
     @AndroidFindBy(accessibility = "menu item log out")
     private WebElement logoutOption;
+
+    @AndroidFindBy(accessibility = "menu item reset app")
+    private WebElement resetOption;
+
+    @AndroidFindBy(id = "android:id/alertTitle")
+    private WebElement alertPopup;
+
+    @AndroidFindBy(id = "android:id/button1")
+    private WebElement btnAccept;
+
+    @AndroidFindBy(id = "android:id/button2")
+    private WebElement btnCancel;
 
     public WebElement getViewOption() {
         return viewOption;
@@ -22,5 +34,21 @@ public class LeftMenuPage extends BasePage{
 
     public WebElement getLogoutOption() {
         return logoutOption;
+    }
+
+    public WebElement getResetOption() {
+        return resetOption;
+    }
+
+    public WebElement getAlertPopup() {
+        return alertPopup;
+    }
+
+    public WebElement getBtnAccept() {
+        return btnAccept;
+    }
+
+    public WebElement getBtnCancel() {
+        return btnCancel;
     }
 }

@@ -40,13 +40,13 @@ public class logOutApp {
 
     @And("The user clicks the logout button")
     public void theUserClicksTheLogoutButton() {
-        logOutSteps.clickLogOut();
+        logOutSteps.clickOK();
     }
 
     @And("The user clicks OK on the confirmation pop-up {string}")
     public void theUserClicksOKOnTheConfirmationPopUp(String arg0) {
         Assert.assertEquals(logOutSteps.isAlertVisible(), arg0, "It's not right pop up.");
-        logOutSteps.clickLogOut();//In this case I can use the same locator to Accept the second pop up.
+        logOutSteps.clickOK();//In this case I can use the same locator to Accept the second pop up.
     }
 
     @Then("The user should be logged out")

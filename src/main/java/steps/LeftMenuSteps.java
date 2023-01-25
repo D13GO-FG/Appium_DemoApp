@@ -14,13 +14,18 @@ public class LeftMenuSteps extends BaseStep{
     public LeftMenuSteps(AndroidDriver androidDriver) {
         super(androidDriver);
     }
-    public void clickWebView(){
+    public void clickWebViewOption(){
         WebElement clickOption = new WebDriverWait(driver, Duration.ofSeconds(5)).until(ExpectedConditions.visibilityOf(leftMenuPage.getViewOption()));
         clickOption.click();
     }
 
     public void clickLogOutOption(){
         WebElement option = new WebDriverWait(driver, Duration.ofSeconds(5)).until(ExpectedConditions.visibilityOf(leftMenuPage.getLogoutOption()));
+        option.click();
+    }
+
+    public void clickResetOption(){
+        WebElement option = new WebDriverWait(driver, Duration.ofSeconds(5)).until(ExpectedConditions.visibilityOf(leftMenuPage.getResetOption()));
         option.click();
     }
 

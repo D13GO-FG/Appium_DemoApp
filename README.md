@@ -145,3 +145,28 @@ Background:
 |                    Logout option                    |                 Pop up with options                 |               Pop up with success msg               |                 Logout Final Screen                 |
 |:---------------------------------------------------:|:---------------------------------------------------:|:---------------------------------------------------:|:---------------------------------------------------:|
 | ![Logout_1](src/main/resources/images/logout_1.png) | ![Logout_2](src/main/resources/images/logout_2.png) | ![Logout_3](src/main/resources/images/logout_3.png) | ![Logout_4](src/main/resources/images/logout_4.png) |
+
+6. ResetApp Page
+````
+@SmokeResetApp
+Feature: Reset App
+  As a user
+  I want to be able to reset the app
+  So that I can start fresh with the application
+Background:
+  Given The user is in Catalog
+  When The user open the left menu of options
+  And The user clicks the reset option
+  When The user looks at the reset confirmation pop-up "Reset App State"
+  Scenario: Successful reset app
+    And The user clicks the reset app button
+    And The user clicks OK on the confirmation pop-up "App State has been reset."
+    Then The user returns to left menu
+
+  Scenario: Cancel reset app
+    And The user clicks the cancel button
+    Then The user returns to left menu
+````
+|                   Reset option                    |                Pop up with options                |              Pop up with success msg              |
+|:-------------------------------------------------:|:-------------------------------------------------:|:-------------------------------------------------:|
+| ![Reset_1](src/main/resources/images/reset_1.png) | ![Reset_2](src/main/resources/images/reset_2.png) | ![Reset_3](src/main/resources/images/reset_3.png) |

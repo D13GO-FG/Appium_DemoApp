@@ -8,9 +8,9 @@ import pageObjects.LeftMenuPage;
 
 import java.time.Duration;
 
-public class LogOutSteps extends BaseStep{
+public class ResetAppSteps extends BaseStep{
     LeftMenuPage leftMenuPage = new LeftMenuPage(driver);
-    public LogOutSteps(AndroidDriver androidDriver) {
+    public ResetAppSteps(AndroidDriver androidDriver) {
         super(androidDriver);
     }
 
@@ -21,11 +21,6 @@ public class LogOutSteps extends BaseStep{
 
     public void clickOK(){
         WebElement btn = new WebDriverWait(driver, Duration.ofSeconds(5)).until(ExpectedConditions.visibilityOf(leftMenuPage.getBtnAccept()));
-        btn.click();
-    }
-
-    public void clickCancel(){
-        WebElement btn = new WebDriverWait(driver, Duration.ofSeconds(5)).until(ExpectedConditions.visibilityOf(leftMenuPage.getBtnCancel()));
         btn.click();
     }
 }

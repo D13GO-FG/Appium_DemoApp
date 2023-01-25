@@ -26,7 +26,7 @@ public class openWebView {
 
     @And("Clicks on the WebView option")
     public void clicksOnTheWebViewOption() {
-        leftMenuSteps.clickWebView();
+        leftMenuSteps.clickWebViewOption();
     }
 
     @And("Inserts the URL {string} into the input field")
