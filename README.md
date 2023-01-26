@@ -170,3 +170,21 @@ Background:
 |                   Reset option                    |                Pop up with options                |              Pop up with success msg              |
 |:-------------------------------------------------:|:-------------------------------------------------:|:-------------------------------------------------:|
 | ![Reset_1](src/main/resources/images/reset_1.png) | ![Reset_2](src/main/resources/images/reset_2.png) | ![Reset_3](src/main/resources/images/reset_3.png) |
+
+7. QR Code Scanner
+````
+@SmokeQRCodeScanner
+Feature: Scan QR Code
+  As a user
+  I want to be able to scan a QR code
+  So that I can open a URL in a browser
+  Scenario: Successful scanned QR code
+    Given The user is in Qr Code Scanner view
+    When The camera is open and look at QR
+    Then The user sees browser with url "saucedemo.com"
+````
+Note: To open QR code in virtual camera is need to follow this page: [Automate_custom_image_using_android_emulator](https://medium.com/@mhabiib/automate-custom-image-using-android-emulator-virtual-scene-camera-817086056fca)
+
+|                 QR Code Scanner View                  |                  Browser opening URL                  |
+|:-----------------------------------------------------:|:-----------------------------------------------------:|
+| ![Scanner_1](src/main/resources/images/scanner_1.png) | ![Scanner_2](src/main/resources/images/scanner_2.png) |
