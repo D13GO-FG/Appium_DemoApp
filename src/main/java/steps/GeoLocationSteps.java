@@ -1,45 +1,31 @@
 package steps;
 
 import io.appium.java_client.android.AndroidDriver;
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
 import pageObjects.GeoLocationPage;
 
-import java.time.Duration;
-
 public class GeoLocationSteps extends BaseStep{
-    GeoLocationPage geoLocationPage = new GeoLocationPage(driver);
+    GeoLocationPage geoLocationPage = new GeoLocationPage(getDriver());
     public GeoLocationSteps(AndroidDriver androidDriver) {
         super(androidDriver);
     }
 
     public boolean getTitlePage(){
-        WebElement title = new WebDriverWait(driver, Duration.ofSeconds(5)).until(ExpectedConditions.visibilityOf(geoLocationPage.getTitlePage()));
-        return title.isDisplayed();
+        return doesElementExist(geoLocationPage.getTitlePage(), SMALL_WAIT);
     }
 
     public void clickStop(){
-        WebElement btn = new WebDriverWait(driver, Duration.ofSeconds(5)).until(ExpectedConditions.visibilityOf(geoLocationPage.getBtnStop()));
-        btn.click();
+        click(geoLocationPage.getBtnStop());
     }
 
     public void clickStart(){
-        WebElement btn = new WebDriverWait(driver, Duration.ofSeconds(5)).until(ExpectedConditions.visibilityOf(geoLocationPage.getBtnStart()));
-        btn.click();
+        click(geoLocationPage.getBtnStart());
     }
 
     public String getLatitude(){
-        WebElement label = new WebDriverWait(driver, Duration.ofSeconds(5)).until(ExpectedConditions.visibilityOf(geoLocationPage.getLatitudeData()));
-        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(5));
-        wait.until(ExpectedConditions.not(ExpectedConditions.attributeToBe(label,"text","0")));
-        return label.getText();
+        return waitForAttributeToBeDifferentThan(geoLocationPage.getLatitudeData(), "text", "0", SMALL_WAIT).getText();
     }
 
     public String getLongitude(){
-        WebElement label = new WebDriverWait(driver, Duration.ofSeconds(5)).until(ExpectedConditions.visibilityOf(geoLocationPage.getLongitudeData()));
-        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(5));
-        wait.until(ExpectedConditions.not(ExpectedConditions.attributeToBe(label,"text","0")));
-        return label.getText();
+        return waitForAttributeToBeDifferentThan(geoLocationPage.getLongitudeData(), "text", "0", SMALL_WAIT).getText();
     }
 }

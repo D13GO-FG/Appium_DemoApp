@@ -1,31 +1,23 @@
 package steps;
 
 import io.appium.java_client.android.AndroidDriver;
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
 import pageObjects.LeftMenuPage;
 
-import java.time.Duration;
-
 public class LogOutSteps extends BaseStep{
-    LeftMenuPage leftMenuPage = new LeftMenuPage(driver);
+    LeftMenuPage leftMenuPage = new LeftMenuPage(getDriver());
     public LogOutSteps(AndroidDriver androidDriver) {
         super(androidDriver);
     }
 
     public String isAlertVisible(){
-        WebElement popup = new WebDriverWait(driver, Duration.ofSeconds(5)).until(ExpectedConditions.visibilityOf(leftMenuPage.getAlertPopup()));
-        return popup.getText();
+        return waitForDisplayedElement(leftMenuPage.getAlertPopup(), SMALL_WAIT).getText();
     }
 
     public void clickOK(){
-        WebElement btn = new WebDriverWait(driver, Duration.ofSeconds(5)).until(ExpectedConditions.visibilityOf(leftMenuPage.getBtnAccept()));
-        btn.click();
+        click(leftMenuPage.getBtnAccept());
     }
 
     public void clickCancel(){
-        WebElement btn = new WebDriverWait(driver, Duration.ofSeconds(5)).until(ExpectedConditions.visibilityOf(leftMenuPage.getBtnCancel()));
-        btn.click();
+        click(leftMenuPage.getBtnCancel());
     }
 }

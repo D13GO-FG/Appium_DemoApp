@@ -4,10 +4,20 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ab04c182-13b4-490d-8602-cc3b5bf61f05" name="Changes" comment="Test case: Verify QR Code Scanner feature, check correct scan of QR Code in virtual scenario and open right URL in a browser.">
+    <list default="true" id="ab04c182-13b4-490d-8602-cc3b5bf61f05" name="Changes" comment="Refactoring Steps files for changes in BaseStep, using method click, waits and other in every subclass of BaseStep.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/steps/BaseStep.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/steps/BaseStep.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/steps/CatalogSteps.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/steps/CatalogSteps.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/steps/CheckoutSteps.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/steps/CheckoutSteps.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/steps/DrawingStep.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/steps/DrawingStep.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/steps/GeoLocationSteps.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/steps/GeoLocationSteps.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/steps/LeftMenuSteps.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/steps/LeftMenuSteps.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/steps/LogInSteps.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/steps/LogInSteps.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/steps/LogOutSteps.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/steps/LogOutSteps.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/steps/ProductSteps.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/steps/ProductSteps.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/steps/QRCodeScannerSteps.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/steps/QRCodeScannerSteps.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/steps/ResetAppSteps.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/steps/ResetAppSteps.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/steps/WebViewSteps.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/steps/WebViewSteps.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/runner/testRunner.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/runner/testRunner.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -240,7 +250,14 @@
       <option name="project" value="LOCAL" />
       <updated>1674726373662</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="Refactoring CatalogSteps to changes in BaseStep, added methods in BaseSteps to reuse waits, click and displayed of elements.">
+      <created>1675060647911</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1675060647911</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -266,6 +283,8 @@
     <MESSAGE value="Test case: Verify Logout feature, check correct flow to successfully logged out and also flow to cancel logout." />
     <MESSAGE value="Test case: Verify Reset App feature, check correct flow to successfully reset app and also flow to cancel reset." />
     <MESSAGE value="Test case: Verify QR Code Scanner feature, check correct scan of QR Code in virtual scenario and open right URL in a browser." />
-    <option name="LAST_COMMIT_MESSAGE" value="Test case: Verify QR Code Scanner feature, check correct scan of QR Code in virtual scenario and open right URL in a browser." />
+    <MESSAGE value="Refactoring CatalogSteps to changes in BaseStep, added methods in BaseSteps to reuse waits, click and displayed of elements." />
+    <MESSAGE value="Refactoring Steps files for changes in BaseStep, using method click, waits and other in every subclass of BaseStep." />
+    <option name="LAST_COMMIT_MESSAGE" value="Refactoring Steps files for changes in BaseStep, using method click, waits and other in every subclass of BaseStep." />
   </component>
 </project>

@@ -5,7 +5,7 @@ import io.appium.java_client.android.AndroidDriver;
 import pageObjects.CatalogPage;
 
 public class CatalogSteps extends BaseStep {
-    CatalogPage catalogPage = new CatalogPage(driver);
+    CatalogPage catalogPage = new CatalogPage(getDriver());
     public CatalogSteps(AndroidDriver driver){
         super(driver);
     }

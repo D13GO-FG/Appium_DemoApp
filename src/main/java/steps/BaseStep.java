@@ -4,20 +4,23 @@ import io.appium.java_client.android.AndroidDriver;
 import org.openqa.selenium.*;
 import org.openqa.selenium.interactions.PointerInput;
 import org.openqa.selenium.interactions.Sequence;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.FluentWait;
 import static org.openqa.selenium.support.ui.ExpectedConditions.*;
 
 import java.time.Duration;
 import java.util.Collections;
+import java.util.Optional;
+import java.util.Set;
 
 public class BaseStep {
-    AndroidDriver driver;
+    private AndroidDriver driver;
 
-//    public AndroidDriver getDriver(){
-//        return this.driver;
-//    }
+    public AndroidDriver getDriver(){
+        return this.driver;
+    }
 
-    public static final int MIN_WAIT = 2;
+    //public static final int MIN_WAIT = 2;
     public static final int SMALL_WAIT = 10;
     //public static final int MED_WAIT = 30;
     //public static final int LONG_WAIT = 60;
@@ -44,9 +47,19 @@ public class BaseStep {
         getWait().until(elementToBeClickable(element)).click();
     }
 
-//    protected void waitForDisplayedElement(WebElement element, int seconds){
-//        waitOn(driver, seconds).until(elementToBeClickable(element));
-//    }
+    protected WebElement waitForDisplayedElement(WebElement element, int seconds){
+        return waitOn(driver, seconds).until(visibilityOf(element));
+    }
+
+    protected WebElement waitForAttributeToBeDifferentThan(WebElement element, String attribute, String value, int seconds){
+        WebElement mobileElement = waitForDisplayedElement(element, seconds);
+        boolean status = getWait().until(ExpectedConditions.not(ExpectedConditions.attributeToBe(mobileElement,attribute,value)));
+        if (status) {
+            return mobileElement;
+        }else {
+            return null;
+        }
+    }
 
     protected boolean doesElementExist(WebElement element, int timeout){
         try {
@@ -76,18 +89,32 @@ public class BaseStep {
         touchAction(width, start, end);
     }
 
-    public Boolean scrollToElement(WebElement element){
+    public WebElement scrollFastToElement(WebElement element){
         for (int scroll = 0; scroll < MAX_SCROLL; scroll++) {
             try {
-                if (doesElementExist(element, MIN_WAIT)) {
-                    scroll = MAX_SCROLL;
-                    return true;
+                if (element.isDisplayed()) {
+                    return element;
+                }else {
+                    fastScrollDownTouchAction();
                 }
             }catch (Exception e){
                 System.out.println("Fail find element");
                 fastScrollDownTouchAction();
             }
         }
-        return false;
+        return null;
+    }
+
+    protected Optional<String> getContexts () {
+        Set<String> contextNames = driver.getContextHandles();
+        //contextNames.forEach(System.out::println);
+        Optional<String> webViewContext = contextNames.stream().filter(name -> name.startsWith("WEBVIEW")).findFirst();
+        return webViewContext;
+    }
+
+    public void type(WebElement element, String text){
+        getWait().until(elementToBeClickable(element));
+        element.clear();
+        element.sendKeys(text);
     }
 }
