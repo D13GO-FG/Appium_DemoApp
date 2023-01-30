@@ -1,13 +1,8 @@
 package steps;
 
 import io.appium.java_client.android.AndroidDriver;
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
 
 import pageObjects.CatalogPage;
-
-import java.time.Duration;
 
 public class CatalogSteps extends BaseStep {
     CatalogPage catalogPage = new CatalogPage(driver);
@@ -16,17 +11,14 @@ public class CatalogSteps extends BaseStep {
     }
 
     public void clickProduct(){
-        WebElement clickProduct = new WebDriverWait(driver, Duration.ofSeconds(5)).until(ExpectedConditions.visibilityOf(catalogPage.getSelectProduct()));
-        clickProduct.click();
+        click(catalogPage.getSelectProduct());
     }
 
     public Boolean getProductTitle(){
-        WebElement isVisible = new WebDriverWait(driver, Duration.ofSeconds(5)).until(ExpectedConditions.visibilityOf(catalogPage.getTitleProduct()));
-        return isVisible.isDisplayed();
+        return doesElementExist(catalogPage.getTitleProduct(), SMALL_WAIT);
     }
 
     public void clickBurgerBtn(){
-        WebElement clickBtn = new WebDriverWait(driver, Duration.ofSeconds(5)).until(ExpectedConditions.visibilityOf(catalogPage.getBurgerBtn()));
-        clickBtn.click();
+        click(catalogPage.getBurgerBtn());
     }
 }

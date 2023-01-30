@@ -4,16 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ab04c182-13b4-490d-8602-cc3b5bf61f05" name="Changes" comment="Test case: Verify Reset App feature, check correct flow to successfully reset app and also flow to cancel reset.">
-      <change afterPath="$PROJECT_DIR$/src/main/java/pageObjects/QRCodeScannerPage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/steps/QRCodeScannerSteps.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/images/qr-code.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/images/scanner_1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/images/scanner_2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/stepDefinitions/scanQrCode.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/resources/features/scanQrCode.feature" afterDir="false" />
+    <list default="true" id="ab04c182-13b4-490d-8602-cc3b5bf61f05" name="Changes" comment="Test case: Verify QR Code Scanner feature, check correct scan of QR Code in virtual scenario and open right URL in a browser.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/steps/BaseStep.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/steps/BaseStep.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/steps/CatalogSteps.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/steps/CatalogSteps.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/runner/testRunner.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/runner/testRunner.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -239,7 +233,14 @@
       <option name="project" value="LOCAL" />
       <updated>1674622990518</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="Test case: Verify QR Code Scanner feature, check correct scan of QR Code in virtual scenario and open right URL in a browser.">
+      <created>1674726373662</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1674726373662</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -264,6 +265,7 @@
     <MESSAGE value="Test case: Verify Login view, check scenario with correct credential and scenario with wrong credentials because a locked user and incorrect password." />
     <MESSAGE value="Test case: Verify Logout feature, check correct flow to successfully logged out and also flow to cancel logout." />
     <MESSAGE value="Test case: Verify Reset App feature, check correct flow to successfully reset app and also flow to cancel reset." />
-    <option name="LAST_COMMIT_MESSAGE" value="Test case: Verify Reset App feature, check correct flow to successfully reset app and also flow to cancel reset." />
+    <MESSAGE value="Test case: Verify QR Code Scanner feature, check correct scan of QR Code in virtual scenario and open right URL in a browser." />
+    <option name="LAST_COMMIT_MESSAGE" value="Test case: Verify QR Code Scanner feature, check correct scan of QR Code in virtual scenario and open right URL in a browser." />
   </component>
 </project>
