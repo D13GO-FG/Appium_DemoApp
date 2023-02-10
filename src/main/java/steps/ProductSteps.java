@@ -15,4 +15,12 @@ public class ProductSteps extends BaseStep{
     public void clickBtnCard(){
         click(productPage.getBtnCard());
     }
+
+    public boolean getTitle(){
+        return doesElementExist(productPage.getTitlePage(), SMALL_WAIT);
+    }
+
+    public void clickBtnProceed(){
+        click(productPage.getBtnProceed());
+    }
 }
